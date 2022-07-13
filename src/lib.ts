@@ -11,7 +11,7 @@ export type Where = Partial<Omit<Row, "cnt">>
 export function passCSV(input: string): Data {
 
     const firstEolIndex = input.indexOf("\n")
-    const header = <unknown>parseDelimitedLine(input.slice(0, firstEolIndex)) as (keyof Row)[];
+    const header = parseDelimitedLine(input.slice(0, firstEolIndex)) as unknown as (keyof Row)[];
 
     return input
         .slice(firstEolIndex + 1)

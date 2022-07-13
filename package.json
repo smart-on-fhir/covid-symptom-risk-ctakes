@@ -2,7 +2,7 @@
   "name": "covid-symptom-risk-ctakes",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://xxdiamondunicornxx.github.io/covid-symptom-risk-ctakes",
+  "homepage": "http://docs.smarthealthit.org/covid-symptom-risk-ctakes/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",

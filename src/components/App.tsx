@@ -126,7 +126,23 @@ export default function App() {
               ultrices gravida dictum.
             </p>
 
-            { document.location.hash === "#csv" && <textarea id="csv" value={csv} onChange={e => setCsv(e.target.value) }/> }
+            <br/>
+            <hr/>
+            <br/>
+            <footer style={{ fontSize: "small" }}>
+            {
+              document.location.search.includes("csv") ?
+                <>
+                  <p style={{ textAlign: "center" }}>
+                    <a href="/">Hide Data Editor</a>
+                  </p>
+                  <textarea id="csv" value={csv} onChange={e => setCsv(e.target.value) }/>
+                </> :
+                <p style={{ textAlign: "center" }}>
+                  <a href="/?csv">View/Edit Data</a>
+                </p>
+            }
+            </footer>
         </div>
     );
 }
