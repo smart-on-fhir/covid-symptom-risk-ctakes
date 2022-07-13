@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/covid-symptom-risk-ctakes/static/css/main.5a2e5200.css",
-    "main.js": "/covid-symptom-risk-ctakes/static/js/main.13c146e0.js",
+    "main.js": "/covid-symptom-risk-ctakes/static/js/main.f4a0b4d6.js",
     "index.html": "/covid-symptom-risk-ctakes/index.html",
     "main.5a2e5200.css.map": "/covid-symptom-risk-ctakes/static/css/main.5a2e5200.css.map",
-    "main.13c146e0.js.map": "/covid-symptom-risk-ctakes/static/js/main.13c146e0.js.map"
+    "main.f4a0b4d6.js.map": "/covid-symptom-risk-ctakes/static/js/main.f4a0b4d6.js.map"
   },
   "entrypoints": [
     "static/css/main.5a2e5200.css",
-    "static/js/main.13c146e0.js"
+    "static/js/main.f4a0b4d6.js"
   ]
 }
