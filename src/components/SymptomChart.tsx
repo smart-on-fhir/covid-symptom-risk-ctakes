@@ -2,6 +2,20 @@ import Chart from "./Chart";
 import { PointOptionsObject, Options } from "highcharts"
 import { count, Data, getUniqueValuesFromColumn } from "../lib";
 
+const COLORS = [
+    "#CC0000",
+    "#DD9966",
+    "#FFCC33",
+    "#AAAA00",
+    "#CC6666",
+    "#DD99FF",
+    "#9999FF",
+    "#7777BB",
+    "#4477BB",
+    "#339999",
+    "#339933"
+]
+
 export default function SymptomChart({ data }: { data: Data })
 {
     let symptoms = getUniqueValuesFromColumn(data, 'symptom_text')
@@ -14,10 +28,11 @@ export default function SymptomChart({ data }: { data: Data })
     }))
 
     const options: Options = {
+        colors: COLORS,
         plotOptions: {
             pie: {
                 innerSize: "50%",
-                minSize: 150,
+                // minSize: 150,
                 borderColor: "rgba(0, 0, 0, 0.75)",
                 borderWidth: 0.25,
                 slicedOffset: 10,
@@ -26,9 +41,13 @@ export default function SymptomChart({ data }: { data: Data })
             series: {
                 dataLabels: {
                     style: {
-                        fontSize: "16px",
+                        fontSize: "14px",
                         fontWeight: "400"
-                    }
+                    },
+                    overflow: "allow",
+                    padding: 0,
+                    defer: true,
+                    color: "#444444"
                 }
             }
         },
