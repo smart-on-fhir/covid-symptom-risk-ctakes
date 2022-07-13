@@ -4,22 +4,22 @@ import { count, Data, getUniqueValuesFromColumn } from "../lib";
 
 const COLORS = [
     "#CC0000",
-    "#DD9966",
+    "#DDAA55",
     "#FFCC33",
-    "#AAAA00",
-    "#CC6666",
-    "#DD99FF",
+    "#BBBB00",
+    "#EE8844",
+    "#DD99EE",
     "#9999FF",
-    "#7777BB",
-    "#4477BB",
-    "#339999",
-    "#339933"
+    "#7777FF",
+    "#55AAFF",
+    "#00CCBB",
+    "#009900"
 ]
 
 export default function SymptomChart({ data }: { data: Data })
 {
     let symptoms = getUniqueValuesFromColumn(data, 'symptom_text')
-        .filter(s => s !== "no Sx covid")    
+        .filter(s => s !== "no Sx covid")
         .sort();
 
     let seriesData: PointOptionsObject[] = symptoms.map(symptom => ({
@@ -32,22 +32,23 @@ export default function SymptomChart({ data }: { data: Data })
         plotOptions: {
             pie: {
                 innerSize: "50%",
-                // minSize: 150,
+                minSize: 100,
                 borderColor: "rgba(0, 0, 0, 0.75)",
                 borderWidth: 0.25,
                 slicedOffset: 10,
                 allowPointSelect: true,
-            },
-            series: {
+                center: ["50%", "50%"],
+                startAngle: 236,
                 dataLabels: {
+                    connectorPadding: 2,
+                    crookDistance: "20em",
+                    distance: "15%",
+                    padding: 5,
+                    color: "#444444",
                     style: {
                         fontSize: "14px",
                         fontWeight: "400"
                     },
-                    overflow: "allow",
-                    padding: 0,
-                    defer: true,
-                    color: "#444444"
                 }
             }
         },
