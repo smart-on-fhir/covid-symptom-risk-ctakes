@@ -2,10 +2,20 @@ import Chart from "./Chart";
 import { Options } from "highcharts"
 import { Data, getUniqueValuesFromColumn, probability } from "../lib";
 
+function computeColor(n: number){
+    let q = n/30
+    let c = q * 200
+    let value = `rgb(${c},${255-c},0)`
+    return value 
+}
+
 export default function RelativeRiskChart({ data }: { data: Data })
 {
     let symptoms = getUniqueValuesFromColumn(data, 'symptom_text').filter(s => s !== "no Sx covid");
-    let counts = symptoms.map(symptom => probability(data, { symptom_text: symptom }) * 100)
+    let counts = symptoms.map(symptom => ({
+        y: probability(data, { symptom_text: symptom }) * 100,
+        color: computeColor(probability(data, { symptom_text: symptom }) * 100)
+    }))
     const options:  Options = {
         title: {
             text: '<b> Probability of Symptom </b>',
@@ -38,7 +48,7 @@ export default function RelativeRiskChart({ data }: { data: Data })
             type: "bar",
             data: counts,
             showInLegend: false,
-            color: "#4477BB",
+           // color: "#4477BB",
         }],
         tooltip: {
             pointFormat: "Probability: {point.y:.2f}",
