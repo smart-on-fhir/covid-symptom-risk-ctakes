@@ -7,6 +7,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #DDD;
+  font-size: 16px;
 }
 
 code, pre, textarea {
@@ -43,6 +44,7 @@ p {
 
 .chart * {
   font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+  /* font-size: 16px; */
 }
 
 @media(max-width: 8.5in) {
