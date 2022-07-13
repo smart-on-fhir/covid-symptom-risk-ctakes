@@ -1,15 +1,14 @@
 export type Data = Row[]
 
 export interface Row {
-    cnt            : number
-    covid_dx       : string | null
-    symptom_text   : string | null
+    cnt         : number
+    covid_dx    : string | null
+    symptom_text: string | null
 }
 
 export type Where = Partial<Omit<Row, "cnt">>
 
 export function passCSV(input: string): Data {
-
     const firstEolIndex = input.indexOf("\n")
     const header = parseDelimitedLine(input.slice(0, firstEolIndex)) as unknown as (keyof Row)[];
 
@@ -120,15 +119,15 @@ export function getUniqueValuesFromColumn(data: Data, columnName: keyof Where){
     return output
 }
 
-export function find(data: Data, where: Where = {}) { // creates an empty object if no parameters
-    return data.find(rec => { // rec = record
+export function find(data: Data, where: Where = {}) {
+    return data.find(rec => {
 
         // If the column is specified in the where conditions, make sure its
         // value matches the one specified in where
         const keys = Object.keys(where)
         const aBadRow = keys.some(key => {
-            const value = where[key as keyof Where ] // what is being looked for 
-            const value2 = rec[key as keyof Row] // in data 
+            const value = where[key as keyof Where ]
+            const value2 = rec[key as keyof Row]
             return value !== value2
 
         })
