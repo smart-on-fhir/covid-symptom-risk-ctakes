@@ -37,7 +37,7 @@ p {
 
 .chart {
   margin: 4em auto;
-  border-radius: 5px;
+  /* border-radius: 5px;  */
   /* box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1); */
 }
 
