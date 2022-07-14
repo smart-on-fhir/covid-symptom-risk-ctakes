@@ -13,7 +13,7 @@ const COLORS = [
     "#7777FF",
     "#55AAFF",
     "#00CCBB",
-    "#009900"
+    "#00AA00"
 ]
 
 export default function SymptomChart({ data }: { data: Data })
@@ -40,14 +40,18 @@ export default function SymptomChart({ data }: { data: Data })
                 center: ["50%", "50%"],
                 startAngle: 236,
                 dataLabels: {
-                    connectorPadding: 2,
+                    connectorPadding: 5,
                     crookDistance: "20em",
-                    distance: "15%",
-                    padding: 5,
+                    distance: "25%",
+                    padding: 0,
                     color: "#444444",
                     style: {
                         fontSize: "14px",
-                        fontWeight: "400"
+                        fontWeight: "400",
+                        // padding: "0 5px",
+                        // width: 100,
+                        // position: "absolute",
+                        // top: "-20px"
                     },
                 }
             }
