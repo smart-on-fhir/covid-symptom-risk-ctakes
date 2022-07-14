@@ -1,6 +1,6 @@
 import Chart from "./Chart";
 import {Options} from "highcharts"
-import { Data, getUniqueValuesFromColumn, relativeRisk } from "../lib";
+import { count, Data, getUniqueValuesFromColumn, relativeRisk } from "../lib";
 import {computeColor} from "./ProbabilityChart";
 
 // Flip chart like no2, move colors (where possible), make axis bold 
@@ -9,7 +9,7 @@ export default function RelativeRiskChart({ data }: { data: Data })
     let symptoms = getUniqueValuesFromColumn(data, 'symptom_text').filter(s => s !== "no Sx covid");
     let counts = symptoms
         .map(symptom => relativeRisk(data, symptom) * 100)
-        color: computeColor(relativeRisk(data, { data: symptoms }) * 100)
+        color: computeColor(relativeRisk(data, {symptom_text : symptoms }) )
     const options: Options = {
         title: {
             text: 'Relative Risk of COVID Given Symptom'
