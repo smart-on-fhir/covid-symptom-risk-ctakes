@@ -53,12 +53,12 @@ export default function App() {
 
     return (
         <div>
-            <h1 style={{ textAlign: "center" }}>The relationship between COVID-19, and common symptoms related to the disease.</h1>
+            <h1 style={{ textAlign: "center"}}>The relationship between COVID-19, and common symptoms related to the disease.</h1>
             <div style={{ textAlign: "center" }}>[ to fill in as needed]</div>
             <br/>
             <br/>
             <h3>Intro</h3>
-            <p>
+            <p style={{fontSize: "14px"}}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
               Pulvinar sapien et ligula ullamcorper malesuada proin libero.
@@ -70,7 +70,7 @@ export default function App() {
               ac. Morbi tincidunt augue interdum velit euismod in.
             </p>
 
-            <p>
+            <p style={{fontSize: "14px"}}>
               Odio ut sem nulla pharetra diam sit amet nisl. Ut tellus elementum
               sagittis vitae et leo duis ut. Facilisis gravida neque convallis a
               cras semper auctor neque vitae. Nunc aliquet bibendum enim
@@ -85,7 +85,7 @@ export default function App() {
 
             <SymptomChart data={data} />
 
-            <p>
+            <p style={{fontSize: "14px"}}>
               Dictum sit amet justo donec enim diam vulputate ut. Pretium fusce
               id velit ut tortor. Pretium viverra suspendisse potenti nullam ac
               tortor. Aliquet nibh praesent tristique magna sit. Sem fringilla
@@ -101,7 +101,7 @@ export default function App() {
 
             <ProbabilityChart data={data} />
 
-            <p>
+            <p style={{fontSize: "14px"}}>
               Eu non diam phasellus vestibulum lorem. Duis at tellus at urna
               condimentum mattis pellentesque id nibh. Massa eget egestas purus
               viverra accumsan in nisl nisi scelerisque. Vel orci porta non
@@ -115,7 +115,7 @@ export default function App() {
 
             <RelativeRiskChart data={data} />
             
-            <p>
+            <p style={{fontSize: "14px"}}>
               Erat nam at lectus urna duis convallis convallis. Purus sit amet
               volutpat consequat mauris nunc. Lorem donec massa sapien faucibus.
               Magna ac placerat vestibulum lectus mauris ultrices eros in cursus.
