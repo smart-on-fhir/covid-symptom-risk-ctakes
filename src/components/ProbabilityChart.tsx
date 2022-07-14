@@ -35,7 +35,8 @@ export default function RelativeRiskChart({ data }: { data: Data })
             zIndex: 2300,
             labels: {
                 style: {
-                    fontWeight: 'bold'
+                    fontWeight: '400',
+                    fontSize: "14px", 
                 }
             }
         },

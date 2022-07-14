@@ -26,10 +26,12 @@ export default function RelativeRiskChart({ data }: { data: Data })
         xAxis: {
             categories: symptoms,
             lineColor: "#888888",
+
             zIndex: 2300,
             labels: {
                 style: {
-                    fontWeight: 'bold'
+                    fontWeight: '400',
+                    fontSize: "14px", 
                 }
             }
         },
@@ -62,7 +64,7 @@ export default function RelativeRiskChart({ data }: { data: Data })
             name: 'Relative Risk',
             type: "bar",
             data: counts,
-            showInLegend: false
+            showInLegend: false,
         }]
     };
 
