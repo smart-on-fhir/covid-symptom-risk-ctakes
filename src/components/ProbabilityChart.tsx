@@ -24,7 +24,10 @@ export default function RelativeRiskChart({ data }: { data: Data })
             }
         },
         subtitle: {
-            text: "Likelyhood of a symptom's presence within COVID-19"
+            text: "Likelyhood of a symptom's presence within COVID-19",
+            style: {
+                fontSize: "18px"
+            },
         },
         xAxis: {
             categories: symptoms,

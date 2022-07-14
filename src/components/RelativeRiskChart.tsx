@@ -18,7 +18,10 @@ export default function RelativeRiskChart({ data }: { data: Data })
             }
         },
         subtitle: {
-            text: "Relative Risk of having COVID-19, given the symptoms present"
+            text: "Relative Risk of having COVID-19, given the symptoms present",
+            style: {
+                fontSize: "18px"
+            },
         },
         xAxis: {
             categories: symptoms,
@@ -36,7 +39,7 @@ export default function RelativeRiskChart({ data }: { data: Data })
         },
         yAxis: {
             title: {
-                text: "<b> Relative Risk </b>"
+                text: "<b> Relative Risk </b>",
             },
             endOnTick: false,
             gridLineDashStyle: "ShortDash",
