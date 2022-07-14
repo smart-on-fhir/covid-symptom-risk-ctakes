@@ -59,7 +59,7 @@ export default function RelativeRiskChart({ data }: { data: Data })
         }],
         tooltip: {
             pointFormat: "Probability: {point.y:.2f} %",
-            headerFormat: ' <b> {point.x} </b> <br/>' 
+            headerFormat: ' <b> {point.x} </b> <br/>',
         },
         credits: {
             enabled: false
