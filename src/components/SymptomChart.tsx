@@ -58,13 +58,13 @@ export default function SymptomChart({ data }: { data: Data })
             }
         },
         title: {
-            text: 'Covid related symptoms',
+            text: '<b> Covid Related symptoms </b>',
             style: {
                 fontSize: "26px"
             }
         },
         subtitle: {
-            text: 'Put something here?',
+            text: 'Distribution of symptoms across patients diagnosed with COVID-19',
             style: {
                 fontSize: "18px"
             }

@@ -53,8 +53,8 @@ export default function App() {
 
     return (
         <div>
-            <h1 style={{ textAlign: "center" }}>covid-symptom-risk-ctakes</h1>
-            <div style={{ textAlign: "center" }}>A sub-title if needed?</div>
+            <h1 style={{ textAlign: "center" }}>The relationship between COVID-19, and common symptoms related to the disease.</h1>
+            <div style={{ textAlign: "center" }}>[ to fill in as needed]</div>
             <br/>
             <br/>
             <h3>Intro</h3>

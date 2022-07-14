@@ -19,9 +19,12 @@ export default function RelativeRiskChart({ data }: { data: Data })
     const options:  Options = {
         title: {
             text: '<b> Probability of Symptom </b>',
+            style: {
+                fontSize: "26px"
+            }
         },
         subtitle: {
-            text: 'Describe the input data here?'
+            text: "Likelyhood of a symptom's presence within COVID-19"
         },
         xAxis: {
             categories: symptoms,
