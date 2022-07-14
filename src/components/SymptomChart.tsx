@@ -29,6 +29,7 @@ export default function SymptomChart({ data }: { data: Data })
 
     const options: Options = {
         colors: COLORS,
+
         plotOptions: {
             pie: {
                 innerSize: "50%",
@@ -67,7 +68,10 @@ export default function SymptomChart({ data }: { data: Data })
             name: "Number of Patients",
             type: "pie",
             data: seriesData
-        }]
+        }],
+    credits: {
+        enabled: false
+    },
     };
 
     return <Chart options={options} />
