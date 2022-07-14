@@ -30,6 +30,10 @@ export default function RelativeRiskChart({ data }: { data: Data })
                 }
             }
         },
+        tooltip: {
+            pointFormat: "Relative Risk: {point.y:.2f} %",
+            headerFormat: ' <b> {point.x} </b> <br/>' 
+        },
         yAxis: {
             title: {
                 text: "<b> Relative Risk </b>"
@@ -42,6 +46,10 @@ export default function RelativeRiskChart({ data }: { data: Data })
         plotOptions: {
             column: {
                 showInLegend: false
+            },
+            series: {
+            borderColor: "rgba(0,0,0,0.75)",
+            borderWidth: 0.25,
             }
         },
         credits: {
