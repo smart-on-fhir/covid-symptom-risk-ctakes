@@ -42,6 +42,9 @@ export default function RelativeRiskChart({ data }: { data: Data })
         yAxis: {
             title: {
                 text: "<b> Relative Risk </b>",
+                style: {
+                    fontSize: "14px"
+                },
             },
             endOnTick: false,
             gridLineDashStyle: "ShortDash",

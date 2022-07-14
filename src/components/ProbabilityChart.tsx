@@ -42,7 +42,10 @@ export default function RelativeRiskChart({ data }: { data: Data })
         },
         yAxis: {
             title: {
-                text: "<b> Probability (%) </b>"
+                text: "<b> Probability (%) </b>",
+                style: {
+                    fontSize: "14px"
+                },
             },
             endOnTick: false,
             gridLineDashStyle: "ShortDash",
