@@ -8,7 +8,7 @@ export interface Row {
 
 export type Where = Partial<Omit<Row, "cnt">>
 
-export function passCSV(input: string): Data {
+export function parseCSV(input: string): Data {
     const firstEolIndex = input.indexOf("\n")
     const header = parseDelimitedLine(input.slice(0, firstEolIndex)) as unknown as (keyof Row)[];
 
@@ -16,12 +16,21 @@ export function passCSV(input: string): Data {
         .slice(firstEolIndex + 1)
         .trim()
         .split(/\n/)
-        .map(line => parseDelimitedLine(line).reduce(
-            (prev:any, cur, i) => {
-                prev[header[i]] = cur
-                return prev
-            }, {}
-        ));
+        .map((line, i) => {
+            try {
+                var lines = parseDelimitedLine(line)
+            } catch (ex: any) {
+                ex.message += ` on line ${i + 2}`;
+                throw ex
+            }
+            
+            return lines.reduce(
+                (prev:any, cur, i) => {
+                    prev[header[i]] = cur
+                    return prev
+                }, {}
+            )
+        });
 }
 
 /**
@@ -102,7 +111,7 @@ export function parseDelimitedLine(
     }
 
     if (expect) {
-        throw new SyntaxError(`Syntax error - unterminated string. Expecting '"'`);
+        throw new SyntaxError(`unterminated string. Expecting '"'`);
     }
 
     return out;
