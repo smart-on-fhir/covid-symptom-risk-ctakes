@@ -1,7 +1,6 @@
 import Chart from "./Chart";
 import {Options} from "highcharts"
-import { count, Data, getUniqueValuesFromColumn, relativeRisk } from "../lib";
-import {computeColor} from "./ProbabilityChart";
+import { Data, getUniqueValuesFromColumn, relativeRisk } from "../lib";
 
 // Flip chart like no2, move colors (where possible), make axis bold 
 export default function RelativeRiskChart({ data }: { data: Data })
