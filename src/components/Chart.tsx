@@ -1,7 +1,8 @@
-import React from "react"
-import Highcharts, { chart } from "highcharts"
-import accessibility from "highcharts/modules/accessibility"
-
+import React from "react";
+import Highcharts, { chart } from "highcharts";
+import accessibility from "highcharts/modules/accessibility";
+import colorChart from "highcharts/modules/coloraxis";
+colorChart(Highcharts)
 accessibility(Highcharts)
 
 

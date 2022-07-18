@@ -2,10 +2,12 @@ import Chart from "./Chart";
 import { Options } from "highcharts"
 import { Data, getUniqueValuesFromColumn, probability } from "../lib";
 
+
 export function computeColor(n: number){
     let q = n/30
-    let c = q * 200
+    let c = q * 230
     let value = `rgb(${c},${255-c},0)`
+
     return value 
 }
 

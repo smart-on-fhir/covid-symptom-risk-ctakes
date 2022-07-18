@@ -5,6 +5,7 @@ import RelativeRiskChart from "./RelativeRiskChart";
 import SymptomChart from "./SymptomChart";
 import preval from 'preval.macro';
 import pkg from '../../package.json';
+import ComparisonChart from "./ComparitiveChart";
 
 const CSV = `"cnt","covid_dx","symptom_text"
 67832,,
@@ -141,6 +142,7 @@ export default function App() {
                   tempus. Amet luctus venenatis lectus magna. Ipsum suspendisse
                   ultrices gravida dictum.
                 </p>
+                <ComparisonChart data={data} />
             </main>
             <footer style={{ fontSize: "small" }}>
               <div className="container">
