@@ -18,7 +18,7 @@ export default function ComparisonChart({ data }: { data: Data })
 const options: Options = {
     colorAxis: {
         min: 0,
-        max: 50, 
+        max: 40, 
         minColor: "rgb(99, 179, 222)",
         maxColor: "rgb(65, 113, 163)",
     },
@@ -77,12 +77,15 @@ const options: Options = {
             borderWidth: 0.25,
         }
     },
+    tooltip: {
+        pointFormat: " {point.y:.2f} %",
+    },
     series: [{
             name: 'Relative Risk',
             data: countsRR,
             type: "column",
             showInLegend: true,
-            
+
     }, {
             name: 'Probability',
             data: counts,
