@@ -85,7 +85,7 @@ const options: Options = {
         }
     },
     tooltip: {
-        pointFormat: "{series.name}: {point.y:.2f} %",
+        pointFormat: "{series.name}: {point.y:.2f}%",
         headerFormat: ' <b> {point.x} </b> <br/>',
 
     },

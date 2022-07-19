@@ -5,7 +5,8 @@ import RelativeRiskChart from "./RelativeRiskChart";
 import SymptomChart from "./SymptomChart";
 import preval from 'preval.macro';
 import pkg from '../../package.json';
-import ComparisonChart from "./ComparitiveChart";
+import ComparisonChart from "./ComparativeChart";
+import CsvEditor from "./CsvEditor";
 
 const CSV = `"cnt","covid_dx","symptom_text"
 67832,,
@@ -151,28 +152,9 @@ export default function App() {
                   target="_blank"
                   rel="noreferrer noopener"
                 >GitHub</a>
-                {
-                  document.location.search.includes("csv") ?
-                    <>
-                      <a className="no-print" href="./">Hide Data Editor</a>
-                      {
-                        parseError ?
-                          <code className="has-error">{ parseError }</code> :
-                          <code>Edit CSV and watch changes applied to charts</code>
-                      }
-                      <textarea
-                        title={parseError || undefined}
-                        className={ "no-print" + (parseError ? " has-error" : "") }
-                        id="csv"
-                        autoCapitalize="no"
-                        autoCorrect="no"
-                        spellCheck="false"
-                        value={csv}
-                        onChange={e => setCsv(e.target.value) }
-                      />
-                    </> :
-                    <a className="no-print" href="./?csv">View/Edit Data</a>
-                }
+                <CsvEditor csv={csv} parseError={parseError} onChange={setCsv}/>
+
+                
                 <div>
                   <span>Last build: {preval`module.exports = new Date().toLocaleString();`}</span>
                   <span>Version: { pkg.version }</span>

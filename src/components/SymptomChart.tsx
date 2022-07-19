@@ -74,6 +74,10 @@ export default function SymptomChart({ data, className}: { data: Data, className
             type: "pie",
             data: seriesData
         }],
+        tooltip: {
+            headerFormat:  ' <b> {point.key} </b> <br/>',
+    
+        },
     credits: {
         enabled: false
     },
