@@ -144,9 +144,11 @@ footer code.has-error {
 
 .chart {
   margin: 3rem auto;
-  aspect-ratio: 3 / 2;
 }
 
+.chart.resizable {
+  aspect-ratio: 3 / 2; 
+}
 .chart * {
   font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
 }

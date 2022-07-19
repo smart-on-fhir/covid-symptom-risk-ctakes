@@ -16,7 +16,7 @@ const COLORS = [
     "#00AA00"
 ]
 
-export default function SymptomChart({ data }: { data: Data })
+export default function SymptomChart({ data, className}: { data: Data, className?: string })
 {
     let symptoms = getUniqueValuesFromColumn(data, 'symptom_text')
         .filter(s => s !== "no Sx covid")
@@ -78,6 +78,7 @@ export default function SymptomChart({ data }: { data: Data })
         enabled: false
     },
     };
-
-    return <Chart options={options} />
+    let x = "chart"+(className? " " +className: "")
+    // return <div ref={this.container} className={x}/>
+    return <Chart options={options} className={x}/>
 }

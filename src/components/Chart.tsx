@@ -8,6 +8,7 @@ accessibility(Highcharts)
 
 interface ChartProps {
     options: Highcharts.Options
+    className?: string 
 }
 
 
@@ -40,6 +41,7 @@ export default class Chart extends React.Component<ChartProps>
     }
 
     render() {
-        return <div ref={this.container} className="chart" />
+        let x = "chart"+(this.props.className? " " +this.props.className: "")
+        return <div ref={this.container} className={x}/>
     }
 }

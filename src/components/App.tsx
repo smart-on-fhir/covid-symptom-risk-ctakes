@@ -99,7 +99,7 @@ export default function App() {
                   mattis molestie a iaculis at erat pellentesque adipiscing commodo.
                 </p>
 
-                <SymptomChart data={data} />
+                <SymptomChart data={data} className="resizable" />
 
                 <p>
                   Dictum sit amet justo donec enim diam vulputate ut. Pretium fusce

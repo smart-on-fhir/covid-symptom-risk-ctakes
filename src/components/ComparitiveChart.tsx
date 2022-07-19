@@ -21,11 +21,14 @@ const options: Options = {
         max: 40, 
         minColor: "rgb(99, 179, 222)",
         maxColor: "rgb(65, 113, 163)",
+        visible: false, 
     },
     title: {
         text: "<b> Relative Risk vs Probability </b>",
+        margin: 0,
         style: {
             fontSize: "26px",
+            padding: "0px",
         },
     },
     xAxis: {
@@ -45,15 +48,19 @@ const options: Options = {
     },
     yAxis: {
         title: {
-            text: "<b> Percentages (%) </b>",
-            style: {
-                fontSize: "14px"
-            },
+            text: "",
+            // style: {
+            //     fontSize: "14px"
+            // },
+            
         },
         endOnTick: false,
         gridLineDashStyle: "ShortDash",
         lineColor: "#888888",
         lineWidth: 1,
+        labels: {
+            format: "{value}%"
+        }
 
     },
     // tooltip: {
@@ -78,7 +85,9 @@ const options: Options = {
         }
     },
     tooltip: {
-        pointFormat: " {point.y:.2f} %",
+        pointFormat: "{series.name}: {point.y:.2f} %",
+        headerFormat: ' <b> {point.x} </b> <br/>',
+
     },
     series: [{
             name: 'Relative Risk',
@@ -97,7 +106,14 @@ const options: Options = {
     credits: {
         enabled: false
     },
+    legend: {
+        verticalAlign: "top",
+        align: "center",
+        y: 30,
+        floating: true,
+    },
     }
+
    return <Chart options={options} />
 }
  
