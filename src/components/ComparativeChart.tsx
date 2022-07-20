@@ -106,14 +106,14 @@ const options: Options = {
     credits: {
         enabled: false
     },
-    legend: {
-        verticalAlign: "top",
-        align: "center",
-        y: 30,
-        floating: true,
-    },
-    }
+    // legend: {
+    //     verticalAlign: "top",
+    //     align: "center",
+    //     y: 30,
+    //     floating: true,
+    // },
+}
 
-   return <Chart options={options} />
+   return <Chart options={options}/>
 }
  
