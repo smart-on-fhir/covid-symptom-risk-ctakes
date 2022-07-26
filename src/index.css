@@ -31,15 +31,15 @@ p {
   margin: 0 auto;
 }
 
-header {
+/* header {
   background-color: rgba(0, 0, 0, 0.3);
   box-shadow: 0 -15px 9px -10px rgba(0, 0, 0, 0.1) inset;
-}
+} */
 
 header .container {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2),
               0 2px 10px -3px rgba(0, 0, 0, 0.5);
-  background: #63b3de linear-gradient(0deg, #4171a3, #0003 100%) 0 -10px no-repeat;
+  background: #2e99d3 linear-gradient(0deg, #63b3de, #0003 100%) 0 -10px no-repeat;
 }
 
 header h1 {
@@ -73,20 +73,20 @@ main {
 }
 
 footer {
-  background-color: rgba(0, 0, 0, 0.3);
+  /* background-color: rgba(0, 0, 0, 0.3); */
   text-align: center;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
 }
 
-footer > .container {
+footer > .container { 
   box-shadow: 0 1px  0    1px  rgba(0, 0, 0, 0.3),
               0 2px  0   -1px  rgba(0, 0, 0, 0.1) inset,
               0 20px 0   -10px #63b3de            inset,
               0 12px 0   -1px  rgba(0, 0, 0, 0.1) inset,
               0 2px 10px -3px  rgba(0, 0, 0, 0.5);
-  background-color: rgba(0, 0, 0, 0.3);
+ background-color: rgba(0, 0, 0, 0.3);
   padding: 2rem 3rem;
-}
+} 
 
 footer .container a, footer .container span {
   text-decoration: none;
