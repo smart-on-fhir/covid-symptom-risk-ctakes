@@ -181,12 +181,21 @@ export function probability(data: Data, where: Where) {
     return count(data, where) / count(data)
 }
 
-export function relativeRisk(data: Data, symptom: string) {
-    return count(data, {
-        symptom_text: symptom,
-        covid_dx: "U07.1 COVID19"
-    }) / count(data, {
-        symptom_text: symptom,
-        covid_dx: "no Dx covid"
-    })
+export function relativeRisk(data: Data, symptom_text: string) {
+    const a = count(data, { symptom_text, covid_dx: "U07.1 COVID19"});
+    const b = count(data, {               covid_dx: "U07.1 COVID19"}) - a;
+    const c = count(data, { symptom_text, covid_dx: "no Dx covid"  });
+    const d = count(data, {               covid_dx: "no Dx covid"  }) - c;
+    
+    const numerator = a / (a + b);
+    const denom     = c / (c + d);
+    return numerator / denom;
+
+    // return count(data, {
+    //     symptom_text: symptom,
+    //     covid_dx: "U07.1 COVID19"
+    // }) / count(data, {
+    //     symptom_text: symptom,
+    //     covid_dx: "no Dx covid"
+    // })
 }
