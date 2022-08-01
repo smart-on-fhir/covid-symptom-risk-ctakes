@@ -44,7 +44,7 @@ export default function RelativeRiskChart({ data }: { data: Data })
         },
         yAxis: {
             title: {
-                text: "<b> Probability (%) </b>",
+                text: "<b> Prevalence (%) </b>",
                 style: {
                     fontSize: "14px"
                 },
@@ -63,7 +63,7 @@ export default function RelativeRiskChart({ data }: { data: Data })
            // color: "#4477BB",
         }],
         tooltip: {
-            pointFormat: "Probability: {point.y:.2f} %",
+            pointFormat: "Prevalence: {point.y:.2f} %",
             headerFormat: ' <b> {point.x} </b> <br/>',
         },
         credits: {

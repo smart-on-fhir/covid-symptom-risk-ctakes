@@ -23,7 +23,7 @@ const options: Options = {
         visible: false, 
     },
     title: {
-        text: "<b> Relative Risk vs Probability </b>",
+        text: "<b> Relative Risk vs Prevalence </b>",
         margin: 0,
         style: {
             fontSize: "26px",
@@ -95,7 +95,7 @@ const options: Options = {
             showInLegend: true,
 
     }, {
-            name: 'Probability',
+            name: 'Prevalence',
             data: counts,
             type: "spline",
             colorAxis: false,
