@@ -11,17 +11,17 @@ export default function RelativeRiskChart({ data }: { data: Data })
         // color: computeColor(relativeRisk(data, {symptom_text : symptoms }) ) - commented as having issues w this line
     const options: Options = {
         title: {
-            text: '<b> Relative Risk of COVID-19 given symptom </b>',
+            text: '<b>Relative Risk of symptom given COVID positive</b>',
             style: {
                 fontSize: "26px"
             }
         },
-        subtitle: {
-            text: "Relative Risk of having COVID-19, given the symptoms present",
-            style: {
-                fontSize: "18px"
-            },
-        },
+        // subtitle: {
+        //     text: "Relative Risk of having COVID-19, given the symptoms present",
+        //     style: {
+        //         fontSize: "18px"
+        //     },
+        // },
         xAxis: {
             categories: symptoms,
             lineColor: "#888888",

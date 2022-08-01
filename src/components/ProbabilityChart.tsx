@@ -20,13 +20,13 @@ export default function RelativeRiskChart({ data }: { data: Data })
     }))
     const options:  Options = {
         title: {
-            text: '<b> Probability of Symptom </b>',
+            text: '<b>Prevalence of Symptom</b>',
             style: {
                 fontSize: "26px"
             }
         },
         subtitle: {
-            text: "Likelyhood of a symptom's presence within COVID-19",
+            text: "Prevalence of each symptom for patients presenting to ED from 2020-2022",
             style: {
                 fontSize: "18px"
             },
