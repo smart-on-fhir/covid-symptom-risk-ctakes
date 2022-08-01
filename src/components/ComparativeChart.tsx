@@ -7,10 +7,9 @@ import "./RelativeRiskChart";
 export default function ComparisonChart({ data }: { data: Data })
 {
     let symptoms = getUniqueValuesFromColumn(data, 'symptom_text').filter(s => s !== "no Sx covid");
-    let countsRR = symptoms
-        .map(symptom => relativeRisk(data, symptom) * 100)
+    let countsRR = symptoms.map(symptom => relativeRisk(data, symptom))
     let counts = symptoms.map(symptom => ({
-        y: probability(data, { symptom_text: symptom }) * 100,
+        y: probability(data, { symptom_text: symptom }),
         // color: computeColor(probability(data, { symptom_text: symptom }) * 100)
     }))
   // rgb(99 179 222) = light blue

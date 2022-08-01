@@ -7,7 +7,7 @@ export default function RelativeRiskChart({ data }: { data: Data })
 {
     let symptoms = getUniqueValuesFromColumn(data, 'symptom_text').filter(s => s !== "no Sx covid");
     let counts = symptoms
-        .map(symptom => relativeRisk(data, symptom) * 100)
+        .map(symptom => relativeRisk(data, symptom))
         // color: computeColor(relativeRisk(data, {symptom_text : symptoms }) ) - commented as having issues w this line
     const options: Options = {
         title: {
@@ -35,7 +35,7 @@ export default function RelativeRiskChart({ data }: { data: Data })
             }
         },
         tooltip: {
-            pointFormat: "Relative Risk: {point.y:.2f} %",
+            pointFormat: "Relative Risk: {point.y:.2f}",
             headerFormat: ' <b> {point.x} </b> <br/>' 
         },
         yAxis: {
