@@ -76,72 +76,36 @@ export default function App() {
             <main>
                 <h3>Intro</h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Pulvinar sapien et ligula ullamcorper malesuada proin libero.
-                  Lacus sed turpis tincidunt id aliquet risus. Viverra accumsan in
-                  nisl nisi scelerisque eu. Vitae elementum curabitur vitae nunc sed.
-                  Urna porttitor rhoncus dolor purus non enim praesent elementum
-                  facilisis. Ut aliquam purus sit amet luctus venenatis. Arcu non
-                  odio euismod lacinia at quis. Senectus et netus et malesuada fames
-                  ac. Morbi tincidunt augue interdum velit euismod in.
+                There were a total of 165527 patients’ records used within the study. The patient cohort selection originated from Boston Children’s Hospital Emergency Department, during 2020-2022, and sought treatment for symptoms related to the disease. The overall aim was to establish the relationship between 11 of the symptoms commonly associated with the virus, and whether a patient has contracted it or not. Overall, 2194 received a diagnosis of COVID. Patient counts were extracted from a csv file, parsed, and rendered into multiple graphs, including a pie chart, bar chart, and bar plus spline chart. 
+ 
+                The patient counts were collected monthly, and their totals were rendered into a graph.The patient count peaked at one years old, with a total of approximately 11k. There are more male patients from 0-13 however only marginally (~1.8k per sex at age 13) and more females over 14. The overall patient count decreases after age 1 till age 12, where it slightly rises till age 15, before decreasing again. After age 21, the patient count is minimal (<1k).
                 </p>
 
                 <p>
-                  Odio ut sem nulla pharetra diam sit amet nisl. Ut tellus elementum
-                  sagittis vitae et leo duis ut. Facilisis gravida neque convallis a
-                  cras semper auctor neque vitae. Nunc aliquet bibendum enim
-                  facilisis gravida neque convallis a cras. Sed egestas egestas
-                  fringilla phasellus faucibus. Tristique senectus et netus et
-                  malesuada fames ac. Tempor commodo ullamcorper a lacus vestibulum
-                  sed arcu. Quis hendrerit dolor magna eget. Gravida dictum fusce ut
-                  placerat orci nulla pellentesque dignissim enim. Ornare aenean
-                  euismod elementum nisi quis eleifend quam adipiscing vitae. Cursus
-                  mattis molestie a iaculis at erat pellentesque adipiscing commodo.
+                In the first graph, regarding the distribution of symptoms in all individuals given COVID-19, the results were quite varied. Most patients (19,545) had fever and chills, closely followed by nausea and vomiting (17,911), and cough (17, 593). The less common symptoms included muscle and body aches (1487), and anosmia (318). The distribution is calculated by working out the number of patients with a specific symptom, from within the csv file and is eventually rendered into a pie chart.
                 </p>
 
                 <SymptomChart data={data} className="resizable" />
 
                 <p>
-                  Dictum sit amet justo donec enim diam vulputate ut. Pretium fusce
-                  id velit ut tortor. Pretium viverra suspendisse potenti nullam ac
-                  tortor. Aliquet nibh praesent tristique magna sit. Sem fringilla
-                  ut morbi tincidunt augue interdum velit euismod. Pretium fusce id
-                  velit ut tortor pretium viverra suspendisse. Arcu risus quis varius
-                  quam quisque id diam. Pharetra sit amet aliquam id diam maecenas
-                  ultricies mi eget. Commodo sed egestas egestas fringilla phasellus.
-                  Volutpat ac tincidunt vitae semper quis lectus nulla. Sit amet
-                  nulla facilisi morbi tempus iaculis urna id. Purus faucibus ornare
-                  suspendisse sed nisi lacus sed viverra tellus. Leo a diam
-                  sollicitudin tempor.
+                  In the second graph, relating to the prevalence of a symptom within a patient given COVID-19, the results follow a similar trend, with fever and chills being the highest probability (28.81%), and anosmia at the lowest (0.47%). The colour scheme used within the bar charts provides a visual representation of the likelihood of a symptom, with red correlating to a higher probability. The probability is calculated by taking the data within the csv file, and times by 100, in order to make it a percentage, with the colour scheme directly depending upon the value provided.
                 </p>
 
                 <ProbabilityChart data={data} />
 
                 <p>
-                  Eu non diam phasellus vestibulum lorem. Duis at tellus at urna
-                  condimentum mattis pellentesque id nibh. Massa eget egestas purus
-                  viverra accumsan in nisl nisi scelerisque. Vel orci porta non
-                  pulvinar neque laoreet. Nisi est sit amet facilisis magna. Amet
-                  est placerat in egestas erat. Fermentum et sollicitudin ac orci
-                  phasellus egestas tellus rutrum tellus. Curabitur vitae nunc sed
-                  velit dignissim sodales. Accumsan in nisl nisi scelerisque eu
-                  ultrices vitae auctor. Mi proin sed libero enim sed faucibus turpis.
-                  Elit pellentesque habitant morbi tristique senectus.
+                In the third graph, the relative risk is calculated of an individual having COVID-19, given their symptoms present. If an individual has anosmia, the chances of them having the virus is high, at 10.82, contrasting with the next symptoms, which average to around 2, including Fever and chills (2.16), Cough (2.10), and Fatigue (2.14). All numbers have been rounded to 2 decimal places for easier analysis. The relative risk is calculated by a deceleration of 4 different variables within the code: 
+                A = Covid diagnosis & presence of a specific symptom 
+                B = Covid diagnosis & no presence of a specific symptom - A
+                C = No covid diagnosis & presence of a specific symptom 
+                D = No covid diagnosis & no presence of a specific symptom - C
+
                 </p>
 
                 <RelativeRiskChart data={data} />
                 
                 <p>
-                  Erat nam at lectus urna duis convallis convallis. Purus sit amet
-                  volutpat consequat mauris nunc. Lorem donec massa sapien faucibus.
-                  Magna ac placerat vestibulum lectus mauris ultrices eros in cursus.
-                  Faucibus ornare suspendisse sed nisi. Risus in hendrerit gravida
-                  rutrum quisque non. Non pulvinar neque laoreet suspendisse interdum
-                  consectetur. Gravida dictum fusce ut placerat orci nulla
-                  pellentesque dignissim enim. Accumsan sit amet nulla facilisi morbi
-                  tempus. Amet luctus venenatis lectus magna. Ipsum suspendisse
-                  ultrices gravida dictum.
+                By doing this study, I have learnt how to use typescript, and how to render graphs from csv file using a mixture of typescript and JavaScript. In addition, I have learnt how to utilise platforms such as GitHub.
                 </p>
                 <ComparisonChart data={data} />
             </main>
