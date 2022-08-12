@@ -78,7 +78,7 @@ export default function App() {
                 <p>
                 There were a total of 165527 patients’ records used within the study. The patient cohort selection originated from Boston Children’s Hospital Emergency Department, during 2020-2022, and sought treatment for symptoms related to the disease. The overall aim was to establish the relationship between 11 of the symptoms commonly associated with the virus, and whether a patient has contracted it or not. Overall, 2194 received a diagnosis of COVID. Patient counts were extracted from a csv file, parsed, and rendered into multiple graphs, including a pie chart, bar chart, and bar plus spline chart. 
  
-                The patient counts were collected monthly, and their totals were rendered into a graph.The patient count peaked at one years old, with a total of approximately 11k. There are more male patients from 0-13 however only marginally (~1.8k per sex at age 13) and more females over 14. The overall patient count decreases after age 1 till age 12, where it slightly rises till age 15, before decreasing again. After age 21, the patient count is minimal (<1k).
+                The patient counts were collected monthly, and their totals were rendered into a graph.The patient count peaked at one years old, with a total of approximately 11k. There are more male patients from 0-13 however only marginally (~1.8k per sex at age 13) and more females over 14. The overall patient count decreases after age 1 till age 12, where it slightly rises till age 15, before decreasing again. After age 21, the patient count is minimal (&lt;1k).
                 </p>
 
                 <p>
@@ -95,10 +95,10 @@ export default function App() {
 
                 <p>
                 In the third graph, the relative risk is calculated of an individual having COVID-19, given their symptoms present. If an individual has anosmia, the chances of them having the virus is high, at 10.82, contrasting with the next symptoms, which average to around 2, including Fever and chills (2.16), Cough (2.10), and Fatigue (2.14). All numbers have been rounded to 2 decimal places for easier analysis. The relative risk is calculated by a deceleration of 4 different variables within the code: 
-                A = Covid diagnosis & presence of a specific symptom 
-                B = Covid diagnosis & no presence of a specific symptom - A
-                C = No covid diagnosis & presence of a specific symptom 
-                D = No covid diagnosis & no presence of a specific symptom - C
+                A = Covid diagnosis &amp; presence of a specific symptom 
+                B = Covid diagnosis &amp; no presence of a specific symptom - A
+                C = No covid diagnosis &amp; presence of a specific symptom 
+                D = No covid diagnosis &amp; no presence of a specific symptom - C
 
                 </p>
 
