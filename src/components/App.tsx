@@ -107,7 +107,7 @@ export default function App() {
                 <p>
                 By doing this study, I have learnt how to use typescript, and how to render graphs from csv file using a mixture of typescript and JavaScript. In addition, I have learnt how to utilise platforms such as GitHub.
                 </p>
-                <ComparisonChart data={data} />
+                {/* <ComparisonChart data={data} /> */}
             </main>
             <footer style={{ fontSize: "small" }}>
               <div className="container">
